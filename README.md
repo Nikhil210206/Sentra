@@ -17,11 +17,11 @@ SENTRA is a **Proactive** safety system, not just a **Reactive** panic button. W
 
 | Component | Technology | Responsibility |
 | :--- | :--- | :--- |
-| **Mobile App (Edge)** | Flutter / React Native | User Interface, Sensor Data, TFLite Inference, Map Display. |
-| **The "Brain" (Backend)** | Python (FastAPI/Flask) | Route Scoring Logic, Zone Management, API handling. |
-| **Database** | Firebase / Supabase | Real-time user location syncing, User Auth, Zone storage. |
-| **ML Engine** | TensorFlow Lite (On-Device) | Audio Event Detection (Screaming, Glass Breaking). |
-| **Dashboard** | React.js / Next.js | Police/Authority view, SOS Alerts, Heatmaps. |
+| **Mobile App (Edge)** | Flutter | User Interface, Sensor Data, TFLite Inference, Map Display. |
+| **The "Brain" (Backend)** | Python (FastAPI) | Route Scoring Logic, Zone Management, API handling. |
+| **Database** | Supabase | Real-time user location syncing, User Auth, Zone storage. |
+| **ML Engine** | TensorFlow Lite (On-Device) | Audio Event Detection (Screaming, Glass Breaking, Agressive male voice). |
+| **Dashboard** | React.js | Police/Authority view, SOS Alerts, Live user tracking Beacons on Map |
 
 ---
 
@@ -78,43 +78,6 @@ SENTRA is a **Proactive** safety system, not just a **Reactive** panic button. W
 * **Input Data:** JSON dataset of ~50 "Incident Points" around Vellore (simulating past harassment reports).
 * **The Algorithm:** **DBSCAN** (Density-Based Spatial Clustering) running on the Python backend.
 * **Output:** Automatically generated polygons (Red Zones) around high-density incident areas.
-
----
-
-## 📅 4. Hackathon Roadmap (10-Day Sprint)
-
-### Phase 1: Data Preparation (Days 1-3)
-- [ ] **Map Data:** Coordinate mapping for VIT Gate, Katpadi Station, Green Circle, major shops, and police stations.
-- [ ] **Crime Data:** Generate `crimes.json` with synthetic incident data clustered around "Dark Spots" in Vellore.
-- [ ] **Audio Data:** Acquire ESC-50 or AudioSet datasets for training.
-
-### Phase 2: Core Engines (Days 4-7)
-- [ ] **ML:** Train TFLite model for specific sound classes (Scream vs. Background Noise).
-- [ ] **Backend:** Build the Route Scoring API.
-- [ ] **Mobile:** UI Skeleton (Login -> Map -> SOS).
-
-### Phase 3: Integration & Demo Prep (Days 8-10)
-- [ ] Connect TFLite model to Mobile App.
-- [ ] **CRITICAL:** Build the **"Developer Simulation Menu"**:
-    -   `[DEV] Force Enter Red Zone`
-    -   `[DEV] Simulate SOS Trigger`
-
----
-
-## 👥 5. Development Roles
-
-### 🧑‍💻 Role 1: ML & Backend Architect
-* **Stack:** Python, TensorFlow, FastAPI.
-* **Focus:** Training the audio model, writing the SafeNav routing logic, and setting up the Zone database.
-
-### 🧑‍💻 Role 2: Mobile Lead
-* **Stack:** Flutter / React Native, Mapbox SDK.
-* **Focus:** Building the UI, handling background services (Adaptive Polling), and integrating sensors.
-
-### 🧑‍💻 Role 3: Integration & Dashboard
-* **Stack:** React.js, Firebase/Supabase.
-* **Focus:** Building the Authority Dashboard, real-time alerts, and gathering the "Vellore Simulation Data."
-
 ---
 
 ## 🛠️ Resources
