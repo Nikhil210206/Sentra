@@ -204,5 +204,3 @@ flutter run
 * Architecture diagram
 * App UI screenshots
 * Animated system flow diagram
-
-These **increase hackathon and recruiter impression a lot.**
