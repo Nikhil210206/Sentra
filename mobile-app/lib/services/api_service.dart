@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  final String _baseUrl = 'http://192.168.0.100:8000';
+  final String _baseUrl = 'http://10.21.140.117:8000';
 
   // UPDATED: Now accepts a simulated hour (e.g., 22 for 10 PM)
   Future<List<dynamic>> getDangerZones({int? simulatedHour}) async {
@@ -15,7 +15,7 @@ class ApiService {
     final url = Uri.parse(urlString);
 
     try {
-      final response = await http.get(url);
+      final response = await http.get(url).timeout(const Duration(seconds: 5));
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         return data['zones'] ?? [];

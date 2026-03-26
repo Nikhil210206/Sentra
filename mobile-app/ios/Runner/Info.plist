@@ -63,6 +63,6 @@
 	<key>io.flutter.embedded_views_preview</key>
 	<true/>
 	<key>MBXAccessToken</key>
-	<string>YOUR_MAPBOX_TOKEN</string>
+	<string>pk.eyJ1IjoibmlraGlsMjEwMjA2IiwiYSI6ImNta2U0NG0zdTAzMzUzZXMwZjZwbXFzZ3kifQ.fgjpDhGp_9bUapwaLEvtsg</string>
 </dict>
 </plist>
