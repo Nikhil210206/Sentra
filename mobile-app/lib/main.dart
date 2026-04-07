@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:mapbox_maps_flutter/mapbox_maps_flutter.dart';
+
 import 'screens/login_screen.dart'; 
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Pass your Mapbox Token here. 
-  MapboxOptions.setAccessToken("pk.eyJ1IjoibmlraGlsMjEwMjA2IiwiYSI6ImNta2U0NG0zdTAzMzUzZXMwZjZwbXFzZ3kifQ.fgjpDhGp_9bUapwaLEvtsg");
+  // Mapbox Token is now set securely via Info.plist (MBXAccessToken)
+  // MapboxOptions.setAccessToken("pk.eyJ1IjoibmlraGlsMjEwMjA2IiwiYSI6ImNta2U0NG0zdTAzMzUzZXMwZjZwbXFzZ3kifQ.fgjpDhGp_9bUapwaLEvtsg");
 
   runApp(const SentraApp());
 }

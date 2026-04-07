@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  final String _baseUrl = 'http://10.21.140.117:8000';
+  final String _baseUrl = 'http://192.168.1.24:8000';
 
   // UPDATED: Now accepts a simulated hour (e.g., 22 for 10 PM)
   Future<List<dynamic>> getDangerZones({int? simulatedHour}) async {
